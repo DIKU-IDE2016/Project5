@@ -1,5 +1,26 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:300);
 
+html,body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#d3MapLayerBox {
+  width: 150px;
+  border-radius: 2px;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid #222;
+}
+  /*end*/
 body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;

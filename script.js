@@ -36,17 +36,21 @@ function openTab(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
+    // *************************************************************
+    // *** Cartography begins **************************************
+    // *************************************************************
 
+map = d3.carto.map();
 
-// declare the dimensions and margins for both plots
-const dim = {
-    w: 500, 
-    h: 500 
-};
+d3.select("#map").call(map);
 
-const margins = {
-    top: 20, 
-    right: 30, 
-    bottom: 50, 
-    left: 50
-};
+wcLayer = d3.carto.layer.tile();
+wcLayer
+  .tileType("cartodb")
+  .path("light_all")
+  .label("CartoDB Light")
+  .visibility(true);
+
+map.addCartoLayer(wcLayer);
+map.centerOn([-79.4,43.7],"latlong");
+map.setScale(10);
