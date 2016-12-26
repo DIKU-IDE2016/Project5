@@ -82,8 +82,8 @@ circle.mouseover{
   font-size: 15.0pt;
 }
 
-.names td{
-  text-decoration: none;
+.names a{
+  text-decoration: none ;
   color: #F4DD51;
 }
 
