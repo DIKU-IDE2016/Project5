@@ -22,6 +22,7 @@
 
 		  	<div class="skew l"></div>
 
+
 		  	<div class="main">
 		    	<div class="names_div">
 		    		<table class="names">
@@ -32,33 +33,64 @@
 			  			</tr>
 	  				</table>
 			    </div>
-			    <div class="container">
-			    <h2>Most dangerous places in San Francisco</h2>
-				<iframe width="100%" height="520" frameborder="0" src="https://ezisezis.carto.com/builder/5fb5f130-c6b0-11e6-ad13-0ef7f98ade21/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-			    </div>
 
-				<ul class="tab">
-				  	<li><a href="javascript:void(0)" class="tablinks" id="defaultOpen" onclick="openTab(event, 'introduction')">Introduction</a></li>
-				  	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'methods')">Methods</a></li>
-				  	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'results')">Results</a></li>
-<!-- 				  	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'conclusion')">Conclusion</a></li> -->
+			    <ul class="tab">
+			  	<li><a href="javascript:void(0)" class="tablinks" id="defaultOpen" onclick="openTab(event, 'vis1_box')">Visualization 1</a></li>
+			  	<li><a href="javascript:void(0)" class="tablinks"  onclick="openTab(event, 'vis2_box')">Visualization 2</a></li>
 				</ul>
 
-				<div id="introduction" class="tabcontent">
-				This visualization is created from dataset <a href="https://wouterboomsma.github.io/ide2016/assignments/assignment5/sf_crime.geojson">sf_crime.geojson</a> and the idea is to find any relevant information  that can be extracted from it. In this visualization you can see the areas with most concentrated crime rates in the city of San Francisco.
+				<div id = "vis1_box" class="tabcontent">
+				    <div class="container">
+				    <h2>Most dangerous places in San Francisco</h2>
+					<iframe width="100%" height="520" frameborder="0" src="https://ezisezis.carto.com/builder/5fb5f130-c6b0-11e6-ad13-0ef7f98ade21/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+				    </div>
+				    <h3>Discussion</h3>
+					<table class="discussion">
+					<tr>
+						<td class="first"><b>Introduction</b></td>
+						<td>
+						<p>
+						This visualization is created from dataset <a href="https://wouterboomsma.github.io/ide2016/assignments/assignment5/sf_crime.geojson">sf_crime.geojson</a> and the idea is to find any relevant information  that can be extracted from it. In this visualization you can see the areas with most concentrated crime rates in the city of San Francisco. 
+						</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="first"><b>Methods</b></td>
+						<td>
+						<p>This visualization takes the aggregation of the marked crime geographic locations and shows the areas with most crime in yeloow color, but the areas with the least crime in dark blue as seen in the legend. The dataset consists of 10000 different crime locations and types at different times in San Francico, but here they are all plotted at the same time on the map in order to find out, which is the area that has the most crime. </p>
+						</td>
+					</tr>
+					<tr>
+						<td class="first"><b>Results</b></td>
+						<td>
+							<p>As a result, we can see which exact points are the most dangerous in the city and have the most crime overall. Almost all of the highest points are located side by side in the city. </p>
+						</td>
+					</tr>
+					
+				</table>
 				</div>
-				
-				<div id="methods" class="tabcontent">
-					This visualization takes the aggregation of the marked crime geographic locations and shows the areas with most crime in yeloow color, but the areas with the least crime in dark blue as seen in the legend. The dataset consists of 10000 different crime locations and types at different times in San Francico, but here they are all plotted at the same time on the map in order to find out, which is the area that has the most crime. 
+				<div id = "vis2_box" class="tabcontent">
+					<div class="container">
+				    <h2>Map showing the most dangerous places in San Francisco</h2>
+					<iframe width="100%" height="520" frameborder="0" src="https://gbengaoti.carto.com/builder/79adfc20-ce7d-11e6-9dc2-0e3ebc282e83/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+				    </div>
+				    <h3>Discussion</h3>
+					<table class="discussion">
+					<tr>
+						<td class="first"><b>Observations</b></td>
+						<td>
+						<p>
+						This visualization is also created from dataset <a href="https://wouterboomsma.github.io/ide2016/assignments/assignment5/sf_crime.geojson">sf_crime.geojson</a>. </p>
+						<p>
+						From studying the visualization closely, it can be seen that crime is widely spread through the city of San Francisco. </p>
+						<p>It can also be noted areas in the North eastern part of the city have a lot of crime.</p>
+						<p> Also, with the help of the widgets, it can be seen that the most common crime category is Larceny/Theft which is widely spread through the city.
+						</p>
+						</td>
+					</tr>
+					
+				</table>
 				</div>
-
-				<div id="results" class="tabcontent">
-					As a result, we can see which exact points are the most dangerous in the city and have the most crime overall. Almost all of the highest points are located side by side in the city.
-				</div>
-
-				<div id="conclusion" class="tabcontent">
-				yo4
-				</div>  
 		  	</div>
 
 			<div class="skew r"></div>

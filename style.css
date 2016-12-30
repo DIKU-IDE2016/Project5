@@ -15,7 +15,7 @@ html,body {
 }
 
 #d3MapLayerBox {
-  width: 150px;
+  width: 200px;
   border-radius: 2px;
   background: rgba(0,0,0,0.4);
   border: 1px solid #222;
@@ -161,7 +161,7 @@ ul.tab li a:focus, .active {background-color: #ccc;}
   background: #0fadc0; 
   position: relative;
   display: block;
-  width: 90%;
+  width: 100%;
   left: 50%;
   top: 0;
   padding: 5px;
