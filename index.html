@@ -1,115 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-	    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
-		<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>IDE Project 5</title>
-	</head>
-	<body>
-
-		<div>
-			<h1>San Francisco Crime</h1>
-		</div>
-		<div class="container_top one">
-		  	<div class=" dashed bk l">
-		    	<div class="arrow top"></div> 
-		    	<div class="arrow bottom"></div>
-		  	</div>
-
-		  	<div class="skew l"></div>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>IDE Project 5</title>
 
 
-		  	<div class="main">
-		    	<div class="names_div">
-		    		<table class="names">
-			  			<tr>
-			  				<td><a>Eduards Klavins</a></td>
-			  				<td><a>Ehsan Khaveh</a></td>
-			  				<td><a>Olugbenga Oti</a></td>
-			  			</tr>
-	  				</table>
-			    </div>
+	<link rel="stylesheet" type="text/css" href="libs/full-page/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="libs/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
-			    <ul class="tab">
-			  	<li><a href="javascript:void(0)" class="tablinks" id="defaultOpen" onclick="openTab(event, 'vis1_box')">Visualization 1</a></li>
-			  	<li><a href="javascript:void(0)" class="tablinks"  onclick="openTab(event, 'vis2_box')">Visualization 2</a></li>
-				</ul>
+</head>
+<body>
+	<ul id="menu">
+		<li data-menuanchor="intro"><a href="#intro">Introduction</a></li>
+		<li data-menuanchor="visualization1"><a href="#visualization1">Visualization 1</a></li>
+		<li data-menuanchor="visualization2"><a href="#visualization2">Visualization 2</a></li>
+	</ul>
 
-				<div id = "vis1_box" class="tabcontent">
-				    <div class="container">
-				    <h2>Most dangerous places in San Francisco</h2>
-					<iframe width="100%" height="520" frameborder="0" src="https://ezisezis.carto.com/builder/5fb5f130-c6b0-11e6-ad13-0ef7f98ade21/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-				    </div>
-				    <h3>Discussion</h3>
-					<table class="discussion">
-					<tr>
-						<td class="first"><b>Introduction</b></td>
-						<td>
-						<p>
-						This visualization is created from dataset <a href="https://wouterboomsma.github.io/ide2016/assignments/assignment5/sf_crime.geojson">sf_crime.geojson</a> and the idea is to find any relevant information  that can be extracted from it. In this visualization you can see the areas with most concentrated crime rates in the city of San Francisco. 
-						</p>
-						</td>
-					</tr>
-					<tr>
-						<td class="first"><b>Methods</b></td>
-						<td>
-						<p>This visualization takes the aggregation of the marked crime geographic locations and shows the areas with most crime in yeloow color, but the areas with the least crime in dark blue as seen in the legend. The dataset consists of 10000 different crime locations and types at different times in San Francico, but here they are all plotted at the same time on the map in order to find out, which is the area that has the most crime. </p>
-						</td>
-					</tr>
-					<tr>
-						<td class="first"><b>Results</b></td>
-						<td>
-							<p>As a result, we can see which exact points are the most dangerous in the city and have the most crime overall. Almost all of the highest points are located side by side in the city. </p>
-						</td>
-					</tr>
-					
-				</table>
+	<div id="fullpage">
+
+		<div class="section " id="section0">
+			<div>
+				<h1>San Francisco</h1>
+				<div class="text-editor-wrap" style="opacity: 0">
+					<div class="text-body">
+						<div id="being_typed_intro" class="inner-text">
+							<p>
+								San Francisco is one of the happiest and most beautiful cities in the US. But did you know that the crime rate in beautiful city is one of the highest in the nation?
+							</p>
+							<br/>
+							<p>
+								In this webpage we have created visualizations that provide different kinds of information about the crime records in San Fransisco. The data for these visualizations were extracted from the dataset sf_crime.geojson, which contains 10.000 randomly sampled and geocoded crime incidents in the city of San Francisco.
+							</p>
+							<br/>
+							<p>
+								To see the first visualizaion scroll down or click on the bouncing arrow below.
+							</p>
+						</div>
+					</div>
 				</div>
-				<div id = "vis2_box" class="tabcontent">
-					<div class="container">
-				    <h2>Map showing the most dangerous places in San Francisco</h2>
-					<iframe width="100%" height="520" frameborder="0" src="https://gbengaoti.carto.com/builder/79adfc20-ce7d-11e6-9dc2-0e3ebc282e83/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-				    </div>
-				    <h3>Discussion</h3>
-					<table class="discussion">
-					<tr>
-						<td class="first"><b>Observations</b></td>
-						<td>
-						<p>
-						This visualization is also created from dataset <a href="https://wouterboomsma.github.io/ide2016/assignments/assignment5/sf_crime.geojson">sf_crime.geojson</a>. </p>
-						<p>
-						From studying the visualization closely, it can be seen that crime is widely spread through the city of San Francisco. </p>
-						<p>It can also be noted areas in the North eastern part of the city have a lot of crime.</p>
-						<p> Also, with the help of the widgets, it can be seen that the most common crime category is Larceny/Theft which is widely spread through the city.
-						</p>
-						</td>
-					</tr>
-					
-				</table>
-				</div>
-		  	</div>
-
-			<div class="skew r"></div>
-			
-			<div class="bk r">
-			  <div class="arrow top"></div> 
-			  <div class="arrow bottom"></div>
 			</div>
-
+			<div class="scroll-indicator" id="sc_ind"><div class="fa fa-chevron-down"></div></div>
 		</div>
+		<div class="section" id="section1">
+			<section>
+			    <div class="one">
+			    	<iframe style="opacity:0" width="100%" height="520" frameborder="0" src="https://ezisezis.carto.com/builder/5fb5f130-c6b0-11e6-ad13-0ef7f98ade21/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+			    </div>
+			    <div class="two">
+			    	<div class="text-editor-wrap vis_wrap_right" style="opacity: 0">
+						<div class="text-body" style="height: 520px;">
+							<div class="inner-text">
+								<h2>Crime Demographics:</h2>
+								<br/>
+								<p>
+									This is the first visualization blah blah. This is the first visualization blah blah. This is the first visualization blah blah. This is the first visualization blah blah. This is the first visualization blah blah. This is the first visualization blah blah. This is the first visualization blah blah. 
+								</p>
+								<br/>
+								<p>
+									This is the first visualization blah blah. This is the first visualization blah blah. This is the first visualization blah blah. This is the first visualization blah blah. This is the first visualization blah blah. This is the first visualization blah blah. This is the first visualization blah blah.
+								</p>
+								<br/>
+								<p>
+									This is the first visualization blah blah. This is the first visualization blah blah.
+								</p>
+							</div>
+						</div>
+					</div>
+			    </div>
+			</section>
+			<div class="scroll-indicator"><div class="fa fa-chevron-down"></div></div>
+		</div>
+		<div class="section" id="section2">
+			<section>
+			    <div class="one">
+			    	<div class="text-editor-wrap vis_wrap" style="opacity: 0">
+						<div class="text-body" style="height: 520px;">
+							<div class="inner-text">
+								<h2>Another Vis</h2>
+								<br/>
+								<p>
+									This is the second visualization blah blah. This is the second visualization blah blah.This is the second visualization blah blah.This is the second visualization blah blah.This is the second visualization blah blah.This is the second visualization blah blah.
+								</p>
+								<br/>
+								<p>
+									This is the second visualization blah blah. This is the second visualization blah blah.This is the second visualization blah blah.This is the second visualization blah blah.This is the second visualization blah blah.
+								</p>
+								<br/>
+								<p>
+									This is the second visualization blah blah. This is the second visualization blah blah.
+								</p>
+							</div>
+						</div>
+					</div>
+			    </div>
+			    <div class="two">
+			    	<iframe style="opacity:0" width="100%" height="520" frameborder="0" src="https://gbengaoti.carto.com/builder/79adfc20-ce7d-11e6-9dc2-0e3ebc282e83/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+			    </div>
+			</section>
+		</div>
+	</div>
+</body>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="libs/full-page/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
-
-	</body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
-	<script type="text/javascript" src="d3_v3/d3.min.js"></script>
-	<script src="d3_v3/d3plus.min.js"></script>
-	<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
-	<script type="text/javascript" src="script.js"></script>
 </html>
