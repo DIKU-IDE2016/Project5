@@ -53,6 +53,11 @@ abbr,acronym { border: 0;
   margin: 0 auto;
   font-size: 1.5em;
 }
+.closing p{
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.0em;
+}
 .section{
   text-align:center;
 }
