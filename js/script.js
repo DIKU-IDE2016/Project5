@@ -64,6 +64,9 @@ $(document).ready(function() {
 		}
 	});
 
+	$.fn.fullpage.setMouseWheelScrolling(false);
+    $.fn.fullpage.setAllowScrolling(false);
+
 	$("#demosMenu").change(function(){
       window.location.href = $(this).find("option:selected").attr("id") + '.html';
     });
