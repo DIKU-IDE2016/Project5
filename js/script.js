@@ -50,16 +50,19 @@ $(document).ready(function() {
 				}, 1500, 'easeOutExpo');
 
 				$('#section3').find('p').first().fadeIn(1800, function(){
-					$('#section1').find('p').last().fadeIn(1800);
-				});;
+					$('#section1').find('p').last().fadeIn(1800,function() {
+						$('#ed').animate({ opacity: 1 }, 800, function() {
+							$('#eh').animate({ opacity: 1 }, 800, function() {
+								$('#gb').animate({ opacity: 1 }, 800);
+							});
+						});
+					});
+				});
 
 			}
 			
 		}
 	});
-
-	$.fn.fullpage.setMouseWheelScrolling(false);
-    $.fn.fullpage.setAllowScrolling(false);
 
 	$("#demosMenu").change(function(){
       window.location.href = $(this).find("option:selected").attr("id") + '.html';

@@ -267,9 +267,19 @@ div.vis_wrap_right {
 }
 
 #section3 img{
-      left: 130%;
-      position:relative;
-  }
-    #section3 p{
-      display:none;
-    }
+  left: 130%;
+  position:relative;
+}
+#section3 p{
+  display:none;
+}
+
+.closing {
+  font-size: 2.5em;
+  color: #FF6B6B;
+}
+
+.closing span{
+  color: #C7F464;
+  opacity: 0;
+}
