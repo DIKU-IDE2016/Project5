@@ -3,8 +3,8 @@ var firsttime = true;
 $(document).ready(function() {
 	$("#menu").hide();
 	$('#fullpage').fullpage({
-		sectionsColor: ['#1bbc9b', '#FF847C', '#1bbc9b', 'whitesmoke', '#ccddff'],
-		anchors: ['intro', 'visualization1', 'visualization2'],
+		sectionsColor: ['whitesmoke', '#FF847C', '#1bbc9b', '#0B486B', '#ccddff'],
+		anchors: ['intro', 'visualization1', 'visualization2', 'aboutus'],
 		menu: '#menu',
 		onLeave: function(index, nextIndex, direction){
 			firsttime = false;
@@ -42,9 +42,24 @@ $(document).ready(function() {
 					});
 				});
 			}
+
+			if(index == 4){
+						//moving the image
+				$('#section3').find('img').delay(500).animate({
+					left: '0%'
+				}, 1500, 'easeOutExpo');
+
+				$('#section3').find('p').first().fadeIn(1800, function(){
+					$('#section1').find('p').last().fadeIn(1800);
+				});;
+
+			}
 			
 		}
 	});
+
+	$.fn.fullpage.setMouseWheelScrolling(false);
+    $.fn.fullpage.setAllowScrolling(false);
 
 	$("#demosMenu").change(function(){
       window.location.href = $(this).find("option:selected").attr("id") + '.html';

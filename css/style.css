@@ -141,7 +141,7 @@ abbr,acronym { border: 0;
   line-height: 1.40em;
   font-weight: 500;
   text-align: left;
-  overflow: hidden;
+  overflow: scroll;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -ms-transition: all 0.5s ease-out;
@@ -252,9 +252,19 @@ div.vis_wrap_right {
 #section1 .inner-text {
   width: inherit !important;
   margin-right: 30px;
+  margin-bottom: 100px;
 }
 
 #section2 .inner-text {
   width: inherit !important;
   margin-right: 30px;
+  margin-bottom: 100px;
 }
+
+#section3 img{
+      left: 130%;
+      position:relative;
+  }
+    #section3 p{
+      display:none;
+    }
